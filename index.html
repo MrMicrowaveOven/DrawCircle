@@ -40,9 +40,9 @@
       var first_quarter_points = draw_first_quarter();
       this.point_storage = this.point_storage.concat(first_quarter_points);
       var second_quarter_points = draw_second_quarter(this.point_storage);
-      this.point_storage.concat(second_quarter_points);
-      var second_half_points = draw_second_half()
-      this.point_storage.concat(second_half_points);
+      this.point_storage = this.point_storage.concat(second_quarter_points);
+      var second_half_points = draw_second_half(this.point_storage)
+      this.point_storage = this.point_storage.concat(second_half_points);
 
     </script>
 
