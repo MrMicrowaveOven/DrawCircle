@@ -1,6 +1,14 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta charset="utf-8" />
+    <script type="text/javascript" src='./draw_point.js'>
+    </script>
+    <script type="text/javascript" src='./carte_to_canvas.js'>
+    </script>
+    <script type="text/javascript" src='./draw_axis.js'>
+    </script>
+
     <meta charset="utf-8">
     <title></title>
   </head>
@@ -9,28 +17,17 @@
 
     <script>
 
-    function draw_point(x, y) {
-      ctx.beginPath();
-      ctx.rect(x, y, 1, 1);
-      // ctx.fillStyle = "black";
-      ctx.fill();
-      ctx.closePath();
-    }
-
     var canvas = document.getElementById("myCanvas");
     var ctx = canvas.getContext("2d");
+    this.ctx = ctx;
 
-    var originX = 300;
-    var originY = 300;
+    this.radius = 100;
 
-    draw_point(20, 20);
+    this.originX = 300;
+    this.originY = 200;
 
-    ctx.beginPath();
-    ctx.rect(originX, originY, 200, 1);
-    ctx.rect(originX, originY, 1, 200);
-    ctx.fillStyle = "black";
-    ctx.fill();
-    ctx.closePath();
+    draw_axis();
+
 
 
     </script>
