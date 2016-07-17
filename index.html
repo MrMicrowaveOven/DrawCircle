@@ -16,6 +16,8 @@
     </script>
     <script type="text/javascript" src='./draw_second_half.js'>
     </script>
+    <script type="text/javascript" src='./draw_circle.js'>
+    </script>
 
     <meta charset="utf-8">
     <title></title>
@@ -34,15 +36,8 @@
       this.originX = 300;
       this.originY = 200;
 
-      this.point_storage = [];
-
       draw_axis();
-      var first_quarter_points = draw_first_quarter();
-      this.point_storage = this.point_storage.concat(first_quarter_points);
-      var second_quarter_points = draw_second_quarter(this.point_storage);
-      this.point_storage = this.point_storage.concat(second_quarter_points);
-      var second_half_points = draw_second_half(this.point_storage)
-      this.point_storage = this.point_storage.concat(second_half_points);
+      draw_circle();
 
     </script>
 
