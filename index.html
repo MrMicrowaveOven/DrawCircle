@@ -31,13 +31,14 @@
       var ctx = canvas.getContext("2d");
       this.ctx = ctx;
 
-      this.radius = 100;
+      var radius = 100;
+      var center = [0,0];
 
       this.originX = 300;
       this.originY = 200;
 
       draw_axis();
-      draw_circle();
+      draw_circle(center, radius);
 
     </script>
 
