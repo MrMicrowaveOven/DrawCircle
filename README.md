@@ -10,7 +10,7 @@ This makes a convenient conversion from cartesian coordinates on the plane into 
 
 Draws a single point, using carte_to_canvas so cartesian coordinates may be used.
 
-## f(x)
+## get_y_coordinate(x, radius)
 
 Used to calculate the corresponding y-coordinate for each x-coordinate.
 
