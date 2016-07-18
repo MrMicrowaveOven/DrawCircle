@@ -5,7 +5,6 @@ function draw_point(x, y) {
   this.ctx.beginPath();
 
   this.ctx.rect(coordinates[0], coordinates[1], 1, 1);
-  // this.ctx.fillStyle = "black";
   this.ctx.fill();
   this.ctx.closePath();
 }
