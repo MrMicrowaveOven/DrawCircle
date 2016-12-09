@@ -6,6 +6,8 @@
     </script>
     <script type="text/javascript" src='./carte_to_canvas.js'>
     </script>
+    <script type="text/javascript" src='./canvas_helpers.js'>
+    </script>
     <script type="text/javascript" src='./draw_axis.js'>
     </script>
     <script type="text/javascript" src='./draw_circle/get_x_coordinate.js'>
@@ -27,15 +29,15 @@
   <body>
     <label>
       Radius:
-      <input type="text" id="radius" size="5">
+      <input type="text" id="radius" value="100" size="5">
     </label>
     <label>
       Center:
-      ( <input type="text" id="centerX" size="5">
+      ( <input type="text" id="centerX" value="0" size="5">
       ,
-      <input type="text" id="centerY" size="5"> )
+      <input type="text" id="centerY" value="0" size="5"> )
     </label>
-    <button onclick="updateCircle()">Add Circle</button>
+    <button onclick="addCircle()">Add Circle</button>
     <button onclick="clearCanvas()">Clear Canvas</button>
     <canvas id="myCanvas" width="720" height="480"></canvas>
 
@@ -43,30 +45,10 @@
     var canvas = document.getElementById("myCanvas");
     var ctx = canvas.getContext("2d");
     this.ctx = ctx;
-    function loadCanvas() {
-      // Axis parameters
-      this.originX = 300;
-      this.originY = 240;
 
-      draw_axis(this.originX, this.originY);
-      ctx.font="16px Georgia";
-      ctx.fillText("100",490,260);
-      ctx.fillText("-100",80,260);
-      ctx.fillText("100",307,45);
-      ctx.fillText("-100",307,445);
-
-    }
     loadCanvas();
 
-    function clearCanvas() {
-      this.ctx.beginPath();
-      this.ctx.clearRect(0,0, 720, 480);
-      this.ctx.fill();
-      this.ctx.closePath();
-      loadCanvas()
-    }
-
-    function updateCircle() {
+    function addCircle() {
       radius = parseInt(document.getElementById("radius").value)
       centerX = parseInt(document.getElementById("centerX").value)
       centerY = parseInt(document.getElementById("centerY").value)
