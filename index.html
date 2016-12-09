@@ -25,11 +25,18 @@
     <title></title>
   </head>
   <body>
-    <input type="text" id="radius" value="100">
-    <input type="text" id="centerX" value="100">
-    <input type="text" id="centerY" value="100">
+    <label>
+      Radius:
+      <input type="text" id="radius" size="5">
+    </label>
+    <label>
+      Center:
+      ( <input type="text" id="centerX" size="5">
+      ,
+      <input type="text" id="centerY" size="5"> )
+    </label>
     <button onclick="updateCircle()">Add Circle</button>
-    <button onclick="clearCanvas()">Clear</button>
+    <button onclick="clearCanvas()">Clear Canvas</button>
     <canvas id="myCanvas" width="720" height="480"></canvas>
 
     <script>
