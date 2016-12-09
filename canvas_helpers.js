@@ -11,10 +11,10 @@ function loadCanvas() {
   this.originY = 240;
 
   draw_axis(this.originX, this.originY);
-  ctx.font="16px Georgia";
-  ctx.fillText("100",490,260);
-  ctx.fillText("-100",80,260);
-  ctx.fillText("100",307,45);
-  ctx.fillText("-100",307,445);
+  ctx.font="12px Georgia";
+  ctx.fillText("100",390,255);
+  ctx.fillText("-100",186,255);
+  ctx.fillText("100",305,144);
+  ctx.fillText("-100",305,344);
 
 }
