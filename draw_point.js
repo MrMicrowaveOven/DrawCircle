@@ -1,5 +1,4 @@
 function draw_point(x, y) {
-
   var coordinates = carte_to_canvas(x,y);
 
   this.ctx.beginPath();

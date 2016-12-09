@@ -1,5 +1,5 @@
 function draw_first_eighth(center, radius){
-  var point_storage = []
+  var PointStorage = []
   // diagonal_eighth is the x-coordinate of the point an eighth
   //  of the way around the circle.
   // We add 1 to the calculation because there tends to be a 'hole'
@@ -12,7 +12,7 @@ function draw_first_eighth(center, radius){
     var shiftedy = y + center[1];
     // This draws the first eighth (0 to 45)
     draw_point(shiftedx, shiftedy);
-    point_storage.push([shiftedx, shiftedy]);
+    PointStorage.push([shiftedx, shiftedy]);
   }
-  return point_storage;
+  return PointStorage;
 }
