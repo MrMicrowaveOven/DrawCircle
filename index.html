@@ -29,6 +29,7 @@
     <input type="text" id="centerX" value="100">
     <input type="text" id="centerY" value="100">
     <button onclick="updateCircle()">Add Circle</button>
+    <button onclick="clearCanvas()">Clear</button>
     <canvas id="myCanvas" width="720" height="480"></canvas>
 
     <script>
@@ -49,6 +50,14 @@
 
     }
     loadCanvas();
+
+    function clearCanvas() {
+      this.ctx.beginPath();
+      this.ctx.clearRect(0,0, 720, 480);
+      this.ctx.fill();
+      this.ctx.closePath();
+      loadCanvas()
+    }
 
     function updateCircle() {
       radius = parseInt(document.getElementById("radius").value)
