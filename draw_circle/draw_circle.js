@@ -1,9 +1,4 @@
 function draw_circle(center, radius) {
-  console.log("Drawing Circle at:");
-  console.log("Center:");
-  console.log(center);
-  console.log("Radius:");
-  console.log(radius);
   var PointStorage = []
   var first_eighth_points = draw_first_eighth(center, radius);
   PointStorage = PointStorage.concat(first_eighth_points);

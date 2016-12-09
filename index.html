@@ -28,36 +28,27 @@
     <input type="text" id="radius" value="100">
     <input type="text" id="centerX" value="100">
     <input type="text" id="centerY" value="100">
-    <button onclick="updateCircle()">Update Circle</button>
+    <button onclick="updateCircle()">Add Circle</button>
     <canvas id="myCanvas" width="720" height="480"></canvas>
 
     <script>
-    // var that = this;
     var canvas = document.getElementById("myCanvas");
     var ctx = canvas.getContext("2d");
     this.ctx = ctx;
-    // Circle parameters
-    var center = [36, -48];
-    var radius = 50;
-    function loadCanvas(center, radius) {
-
-      console.log("LOADING CANVAS:");
-      console.log("Center:");
-      console.log(centerX);
-      console.log(centerY);
-      console.log("Radius:");
-      console.log(radius);
-
-
+    function loadCanvas() {
       // Axis parameters
       this.originX = 300;
       this.originY = 240;
 
       draw_axis(this.originX, this.originY);
-      draw_circle(center, radius);
+      ctx.font="16px Georgia";
+      ctx.fillText("100",490,260);
+      ctx.fillText("-100",80,260);
+      ctx.fillText("100",307,45);
+      ctx.fillText("-100",307,445);
 
     }
-    loadCanvas(center, radius);
+    loadCanvas();
 
     function updateCircle() {
       radius = parseInt(document.getElementById("radius").value)
