@@ -2,6 +2,8 @@
 
 This is the result of a simple challenge given to me.  If you can draw a point on a canvas, how would you go about drawing a circle?
 
+You can view the app [here](https://mrmicrowaveoven.github.io/DrawCircle/).
+
 The first strategy was to convert canvas coordinates (where [0,0] is the top-left corner and all coordinates are positive) to cartesian coordinates (four quadrants with [0,0] at the center).  This was done in `carte_to_canvas`, which makes reflecting parts of the circle much simpler.
 
 From there I calibrated my `draw_point` function into cartesian coordinates, and used the Pythagorion Theorem (in the form of the Distance Formula) to find corresponding y-coordinates given a set of x-coordinates.  This was only used for 1/8th of the circle (then reflected from there) for several reasons (see `get_y_coordinate`).  One good reason to not calculate every point is speed.  Computers are surprisingly slow at calculating square-roots, so the less calculations in this field the better.
