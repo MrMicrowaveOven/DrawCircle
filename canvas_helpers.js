@@ -7,15 +7,21 @@ function clearCanvas() {
 }
 function loadCanvas() {
   // Axis parameters
-  this.originX = 300;
+  this.originX = 360;
   this.originY = 240;
+  originX = this.originX
+  originY = this.originY
 
   draw_axis(this.originX, this.originY);
   ctx.font="12px Georgia";
-  ctx.fillText("100",390,255);
-  ctx.fillText("-100",186,255);
-  ctx.fillText("100",305,144);
-  ctx.fillText("-100",305,344);
+  ctx.fillText("100",originX + 90,originY + 13);
+  ctx.fillText("-100",originX - 114,originY + 13);
+  ctx.fillText("100",originX + 5,originY - 96);
+  ctx.fillText("-100",originX + 5, originY + 104);
+  ctx.fillText("200",originX + 191,originY + 13);
+  ctx.fillText("-200",originX - 216,originY + 13);
+  ctx.fillText("200",originX + 5,originY - 196);
+  ctx.fillText("-200",originX + 5, originY + 204);
   draw_border()
 }
 

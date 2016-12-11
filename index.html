@@ -2,6 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8" />
+    <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
     <script type="text/javascript" src='./draw_point.js'>
     </script>
     <script type="text/javascript" src='./carte_to_canvas.js'>
@@ -27,23 +28,30 @@
     <title></title>
   </head>
   <body>
-    This is a simple DrawCircle app written by me, Benjamin Zagorski, using HTML5 Canvas.  I wrote it without any given circle functions, meaning I am only using software that knows how to make one point at a time.  This challenge was given by a friend of mine, and after completing it I felt like presenting it in such a way that the user can play around with it a bit.
-    <br>
-    <label>
-      Radius:
-      <input type="text" id="radius" value="100" size="5">
-    </label>
-    <label>
-      Center:
-      ( <input type="text" id="centerX" value="0" size="5">
-      ,
-      <input type="text" id="centerY" value="0" size="5"> )
-    </label>
-    <button onclick="addCircle()">Add Circle</button>
-    <button onclick="clearCanvas()">Clear Canvas</button>
-    <br>
-    <canvas id="myCanvas" width="720" height="480"></canvas>
-
+    <div id="elements">
+      <div id="description">
+      This is a simple DrawCircle app written by me, Benjamin Zagorski, using HTML5 Canvas.  I wrote it without any given circle functions, meaning I am only using software that knows how to make one point at a time.  This challenge was given by a friend of mine, and after completing it I felt like presenting it in such a way that the user can play around with it a bit.
+      </div>
+      <br>
+      <div id="inputs">
+        <label>
+          Radius:
+          <input type="text" id="radius" value="100" size="5">
+        </label>
+        <label>
+          Center:
+          ( <input type="text" id="centerX" value="0" size="5">
+          ,
+          <input type="text" id="centerY" value="0" size="5"> )
+        </label>
+        <button onclick="addCircle()">Add Circle</button>
+        <button onclick="clearCanvas()">Clear Canvas</button>
+        <br>
+      </div>
+      <div id="canvas">
+        <canvas id="myCanvas" width="720" height="480"></canvas>
+      </div>
+    </div>
     <script>
     var canvas = document.getElementById("myCanvas");
     var ctx = canvas.getContext("2d");
