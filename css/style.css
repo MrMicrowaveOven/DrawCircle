@@ -8,3 +8,7 @@
   width: 720px;
   margin: auto;
 }
+
+.off_canvas_warning {
+  color: rgba(255, 255, 255, 0);
+}

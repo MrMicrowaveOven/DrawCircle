@@ -1,4 +1,5 @@
 function clearCanvas() {
+  clearWarning();
   this.ctx.beginPath();
   this.ctx.clearRect(0,0, 720, 480);
   this.ctx.fill();

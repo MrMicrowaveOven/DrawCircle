@@ -12,6 +12,8 @@
     </script>
     <script type="text/javascript" src='./draw_axis.js'>
     </script>
+    <script type="text/javascript" src='./off_canvas_warning.js'>
+    </script>
     <script type="text/javascript" src='./draw_circle/get_x_coordinate.js'>
     </script>
     <script type="text/javascript" src='./draw_circle/draw_first_eighth.js'>
@@ -48,7 +50,9 @@
         </label>
         <button onclick="addCircle()">Add Circle</button>
         <button onclick="clearCanvas()">Clear Canvas</button>
-        <br>
+        <div class="off_canvas_warning" id="off_canvas_warning">
+          That circle's coordinates are off of the canvas.  Please choose one within the parameters.
+        </div>
       </div>
       <div id="canvas">
         <canvas id="myCanvas" width="720" height="480"></canvas>
@@ -69,6 +73,7 @@
       centerX = parseInt(document.getElementById("centerX").value)
       centerY = parseInt(document.getElementById("centerY").value)
       center = [centerX, centerY]
+      off_canvas_warning(center, radius)
       draw_circle(center, radius)
     }
 
