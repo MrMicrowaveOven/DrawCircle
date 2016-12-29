@@ -6,6 +6,13 @@ function clearCanvas() {
   loadCanvas();
 }
 function loadCanvas() {
+  // Add a white background
+  this.ctx.beginPath();
+  this.ctx.rect(  0,   0, 720,   480);
+  this.ctx.fillStyle = "white";
+  this.ctx.fill();
+  this.ctx.closePath();
+
   // Axis parameters
   this.originX = 360;
   this.originY = 240;
