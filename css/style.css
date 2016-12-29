@@ -1,6 +1,8 @@
 #elements {
   width: 720px;
   margin: auto;
+  background-color: lightgray;
+  padding: 10px;
 }
 #inputs {
   width: 720px;
