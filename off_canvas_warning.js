@@ -1,8 +1,11 @@
 function off_canvas_warning(center, radius) {
   var xLimit = 360;
   var yLimit = 240;
-  if (center[0] > xLimit || center[0] < -xLimit
-    || center[1] > yLimit || center[1] < -yLimit) {
+
+  var xOffBounds = xLimit - Math.abs(center[0]);
+  var yOffBounds = yLimit - Math.abs(center[1]);
+
+  if (xOffBounds < 0 || yOffBounds < 0) {
     raiseWarning();
   } else {
     clearWarning();
