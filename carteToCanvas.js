@@ -1,4 +1,4 @@
-function carte_to_canvas(x,y) {
+function carteToCanvas(x,y) {
   var originX = this.originX;
   var originY = this.originY;
 

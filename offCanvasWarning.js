@@ -1,4 +1,4 @@
-function off_canvas_warning(center, radius) {
+function offCanvasWarning(center, radius) {
   var xLimit = 360;
   var yLimit = 240;
 
@@ -13,8 +13,8 @@ function off_canvas_warning(center, radius) {
 }
 
 function raiseWarning() {
-  document.getElementById("off_canvas_warning").style.color = "red";
+  document.getElementById("offCanvasWarning").style.color = "red";
 }
 function clearWarning() {
-  document.getElementById("off_canvas_warning").style.color = "rgba(255, 255, 255, 0)";
+  document.getElementById("offCanvasWarning").style.color = "rgba(255, 255, 255, 0)";
 }

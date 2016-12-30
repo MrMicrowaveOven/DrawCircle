@@ -4,27 +4,27 @@
     <title>DrawCircle</title>
     <meta charset="utf-8" />
     <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
-    <script type="text/javascript" src='./draw_point.js'>
+    <script type="text/javascript" src='./drawPoint.js'>
     </script>
-    <script type="text/javascript" src='./carte_to_canvas.js'>
+    <script type="text/javascript" src='./carteToCanvas.js'>
     </script>
-    <script type="text/javascript" src='./canvas_helpers.js'>
+    <script type="text/javascript" src='./canvasHelpers.js'>
     </script>
-    <script type="text/javascript" src='./draw_axis.js'>
+    <script type="text/javascript" src='./drawAxis.js'>
     </script>
-    <script type="text/javascript" src='./off_canvas_warning.js'>
+    <script type="text/javascript" src='./offCanvasWarning.js'>
     </script>
-    <script type="text/javascript" src='./draw_circle/get_x_coordinate.js'>
+    <script type="text/javascript" src='./drawCircle/getXCoordinate.js'>
     </script>
-    <script type="text/javascript" src='./draw_circle/draw_first_eighth.js'>
+    <script type="text/javascript" src='./drawCircle/drawFirstEighth.js'>
     </script>
-    <script type="text/javascript" src='./draw_circle/draw_second_eighth.js'>
+    <script type="text/javascript" src='./drawCircle/drawSecondEighth.js'>
     </script>
-    <script type="text/javascript" src='./draw_circle/draw_second_quarter.js'>
+    <script type="text/javascript" src='./drawCircle/drawSecondQuarter.js'>
     </script>
-    <script type="text/javascript" src='./draw_circle/draw_second_half.js'>
+    <script type="text/javascript" src='./drawCircle/drawSecondHalf.js'>
     </script>
-    <script type="text/javascript" src='./draw_circle/draw_circle.js'>
+    <script type="text/javascript" src='./drawCircle/drawCircle.js'>
     </script>
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico?"/>
 
@@ -50,7 +50,7 @@
         </label>
         <button onclick="addCircle()">Add Circle</button>
         <button onclick="clearCanvas()">Clear Canvas</button>
-        <div class="off_canvas_warning" id="off_canvas_warning">
+        <div class="offCanvasWarning" id="offCanvasWarning">
           That circle's coordinates are off of the canvas.  Please choose one within the parameters.
         </div>
       </div>
@@ -73,8 +73,8 @@
       centerX = parseInt(document.getElementById("centerX").value)
       centerY = parseInt(document.getElementById("centerY").value)
       center = [centerX, centerY]
-      off_canvas_warning(center, radius)
-      draw_circle(center, radius)
+      offCanvasWarning(center, radius)
+      drawCircle(center, radius)
     }
 
     </script>

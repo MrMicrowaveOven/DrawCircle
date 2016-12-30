@@ -22,7 +22,7 @@ function loadCanvas() {
 
   var ctx = this.ctx;
 
-  draw_axis(this.originX, this.originY);
+  drawAxis(this.originX, this.originY);
   ctx.font="12px Georgia";
   ctx.fillText("100",originX + 90,originY + 13);
   ctx.fillText("-100",originX - 114,originY + 13);
@@ -32,10 +32,10 @@ function loadCanvas() {
   ctx.fillText("-200",originX - 216,originY + 13);
   ctx.fillText("200",originX + 5,originY - 196);
   ctx.fillText("-200",originX + 5, originY + 204);
-  draw_border();
+  drawBorder();
 }
 
-function draw_border() {
+function drawBorder() {
   this.ctx.beginPath();
   this.ctx.rect(  0,   0, 720,   1);
   this.ctx.rect(  0,   0,   1, 480);
