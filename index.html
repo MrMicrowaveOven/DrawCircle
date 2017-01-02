@@ -12,7 +12,7 @@
     </script>
     <script type="text/javascript" src='./lib/buildAxis/drawAxis.js'>
     </script>
-    <script type="text/javascript" src='./lib/buildAxis/offCanvasWarning.js'>
+    <script type="text/javascript" src='./lib/buildAxis/errors.js'>
     </script>
     <script type="text/javascript" src='./lib/drawCircle/drawCircle.js'>
     </script>
@@ -51,7 +51,14 @@
         <button onclick="addCircle()">Add Circle</button>
         <button onclick="clearCanvas()">Clear Canvas</button>
         <div class="offCanvasWarning" id="offCanvasWarning">
-          That circle's coordinates are off of the canvas.  Please choose one within the parameters.
+          That circle's center is off of the canvas.  It may be best to choose one within the parameters.
+        </div>
+        <div class="negativeRadiusWarning" id="negativeRadiusWarning">
+          While a negative radius would generally be equivalent to a positive radius (by definition),
+            please use only a postive radius to avoid confusion.
+        </div>
+        <div class="largeRadiusWarning" id="largeRadiusWarning">
+          That circle's radius is HUGE.  Probably too big to show up on the canvas.
         </div>
       </div>
       <div id="canvas">
@@ -74,6 +81,8 @@
       centerY = parseInt(document.getElementById("centerY").value)
       center = [centerX, centerY]
       offCanvasWarning(center, radius)
+      negativeRadiusWarning(center, radius)
+      largeRadiusWarning(center, radius)
       drawCircle(center, radius)
     }
 

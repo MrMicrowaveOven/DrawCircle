@@ -9,6 +9,6 @@
   margin: auto;
 }
 
-.offCanvasWarning {
+.offCanvasWarning, .negativeRadiusWarning, .largeRadiusWarning {
   color: rgba(255, 255, 255, 0);
 }
