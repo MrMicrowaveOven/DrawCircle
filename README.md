@@ -32,7 +32,7 @@ Draws a set of axes centered at the origin provided, complete with gridlines.  N
 
 ## getYCoordinate(x, radius)
 
-Used to calculate the corresponding y-coordinate for each x-coordinate.  This should only be used in the parts of the circle that are less 'steep' (-1 < rate of change < 1).  Otherwise there will be holes, since there will be more than one y-coordinate to each x-coordinate.  For this reason I would use `get_y_coordinate` to find 1/8th of the points on the circle, then reflect from there.
+Used to calculate the corresponding y-coordinate for each x-coordinate.  This should only be used in the parts of the circle that are less 'steep' (-1 < rate of change < 1).  Otherwise there will be holes, since there will be more than one y-coordinate to each x-coordinate.  For this reason I would use `getYCoordinate` to find 1/8th of the points on the circle, then reflect from there.
 
 ## drawFirstQuarter(center, radius)
 
