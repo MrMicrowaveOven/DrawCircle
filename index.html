@@ -36,7 +36,16 @@
       <div id="description">
       This is a simple DrawCircle app written by me, Benjamin Zagorski, using HTML5 Canvas.  I wrote it without any given circle functions, meaning I am only using software that knows how to make one point at a time.  This challenge was given by a friend of mine, and after completing it I felt like presenting it in such a way that the user can play around with it a bit.
       </div>
-      <br>
+      <div class="offCanvasWarning" id="offCanvasWarning">
+        That circle's center is off of the canvas.  It may be best to choose one within the parameters.
+      </div>
+      <div class="negativeRadiusWarning" id="negativeRadiusWarning">
+        While a negative radius would generally be equivalent to a positive radius (depending on definition),
+        please use only a postive radius to avoid confusion.
+      </div>
+      <div class="largeRadiusWarning" id="largeRadiusWarning">
+        That circle's radius is HUGE.  Probably too big to show up on the canvas.
+      </div>
       <div id="inputs">
         <label>
           Radius:
@@ -50,16 +59,6 @@
         </label>
         <button onclick="addCircle()">Add Circle</button>
         <button onclick="clearCanvas()">Clear Canvas</button>
-        <div class="offCanvasWarning" id="offCanvasWarning">
-          That circle's center is off of the canvas.  It may be best to choose one within the parameters.
-        </div>
-        <div class="negativeRadiusWarning" id="negativeRadiusWarning">
-          While a negative radius would generally be equivalent to a positive radius (by definition),
-            please use only a postive radius to avoid confusion.
-        </div>
-        <div class="largeRadiusWarning" id="largeRadiusWarning">
-          That circle's radius is HUGE.  Probably too big to show up on the canvas.
-        </div>
       </div>
       <div id="canvas">
         <canvas id="myCanvas" width="720" height="480"></canvas>
