@@ -2,14 +2,30 @@
   width: 720px;
   margin: auto;
   background-color: rgba(255, 255, 255, .98);
-  padding: 10px;
+  padding: 10px 20px;
 }
+
 #inputs {
   width: 720px;
   margin: auto;
+  display: flex;
+  justify-content: center;
+}
+
+.input {
+  padding: 5px 5px;
+}
+
+#description {
+  padding: 0px 20px;
+  text-align: justify;
 }
 
 .offCanvasWarning, .negativeRadiusWarning, .largeRadiusWarning {
   color: red;
   display: none;
+}
+
+body {
+
 }

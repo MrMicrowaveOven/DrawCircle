@@ -48,18 +48,26 @@
         That circle's radius is HUGE.  Probably too big to show up on the canvas.
       </div>
       <div id="inputs">
-        <label>
-          Radius:
-          <input type="text" id="radius" value="100" size="5">
-        </label>
-        <label>
-          Center:
-          ( <input type="text" id="centerX" value="0" size="5">
-          ,
-          <input type="text" id="centerY" value="0" size="5"> )
-        </label>
-        <button onclick="addCircle()">Add Circle</button>
-        <button onclick="clearCanvas()">Clear Canvas</button>
+        <div class="input">
+          <label>
+            Radius:
+            <input type="text" id="radius" value="100" size="5">
+          </label>
+        </div>
+        <div class="input">
+          <label>
+            Center:
+            ( <input type="text" id="centerX" value="0" size="5">
+            ,
+            <input type="text" id="centerY" value="0" size="5"> )
+          </label>
+        </div>
+        <div class="input">
+          <button onclick="addCircle()">Add Circle</button>
+        </div>
+        <div class="input">
+          <button onclick="clearCanvas()">Clear Canvas</button>
+        </div>
       </div>
       <div id="canvas">
         <canvas id="myCanvas" width="720" height="480"></canvas>
