@@ -16,7 +16,7 @@
   padding: 5px 5px;
 }
 
-#description {
+#description, #offCanvasWarning, #negativeRadiusWarning, #largeRadiusWarning {
   padding: 0px 20px;
   text-align: justify;
 }
@@ -27,5 +27,8 @@
 }
 
 body {
+  font-family: 'Slabo 27px', serif;
+  font-size: 18px;
+  letter-spacing: .5px;
   margin: 60px;
 }
