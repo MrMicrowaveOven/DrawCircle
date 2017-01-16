@@ -32,3 +32,11 @@ body {
   letter-spacing: .5px;
   margin: 60px;
 }
+
+.button {
+  background-color: darkgray;
+  font-family: 'Slabo 27px', serif;
+  letter-spacing: .5px;
+  font-size: small;
+  border-radius: 3px;
+}
